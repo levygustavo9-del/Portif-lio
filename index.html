@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifólio - Lêvy Gustavo</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+</head>
+
+<body>
+    <!-- Navegação -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo"><a href="index.html">LG</a></div>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio" class="nav-link">Início</a></li>
+                <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                <li><a href="#projetos" class="nav-link">Projetos</a></li>
+                <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+                <li><a href="#contato" class="nav-link">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Seção Hero -->
+    <section id="inicio" class="hero">
+
+        <canvas class="tech-bg"></canvas>
+        <div class="hero-content">
+            <h1>Olá! Eu sou <span class="destaque">Lêvy Gustavo</span></h1>
+
+            <p class="hero-subtitle">Desenvolvedor Web em evolução</p>
+
+            <p class="hero-desc">
+                Construindo interfaces modernas, responsivas e bem estruturadas.
+                Em constante aprendizado para evoluir como desenvolvedor Full Stack.
+            </p>
+
+            <div class="cta-buttons">
+                <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
+                <a href="#contato" class="btn btn-secondary">Entre em Contato</a>
+            </div>
+
+        </div>
+        <div class="hero-shape">
+            <div class="photo-container">
+                <img src="imgs/EU.png" alt="Foto de Lêvy Gustavo">
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <h2 class="section-title">Sobre Mim</h2>
+            <div class="sobre-content">
+                <div class="sobre-text">
+                    <p>
+                        Sou desenvolvedor web em constante evolução, focado na construção de
+                        interfaces modernas, funcionais e altamente responsivas.
+                    </p>
+
+                    <p>
+                        Atualmente estou aprofundando meus conhecimentos em JavaScript,
+                        lógica de programação e desenvolvimento de sistemas, com o objetivo
+                        de atuar profissionalmente na área de tecnologia e vendas digitais.
+                        Estou expandindo minha base técnica para evoluir como desenvolvedor
+                        Full Stack.
+                    </p>
+
+                    <p>
+                        Tenho disciplina, visão estratégica e foco em resultados.
+                        Meu compromisso é desenvolver projetos organizados, performáticos
+                        e alinhados com os objetivos reais de cada cliente.
+                    </p>
+
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>1+</h3>
+                            <p>Ano de estudo focado</p>
+                        </div>
+                        <div class="stat">
+                            <h3>100%</h3>
+                            <p>Compromisso com evolução</p>
+                        </div>
+                        <div class="stat">
+                            <h3>Full Stack</h3>
+                            <p>Em construção</p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="sobre-img"><svg width="420" height="420" viewBox="0 0 300 300"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="rootGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#6366f1" />
+                                <stop offset="100%" stop-color="#ec4899" />
+                            </linearGradient>
+
+                            <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                                <feGaussianBlur stdDeviation="3" result="blur" />
+                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                            </filter>
+                        </defs>
+
+                        <circle cx="150" cy="150" r="130" fill="none" stroke="url(#rootGradient)" stroke-width="2"
+                            stroke-dasharray="15 10" opacity="0.4">
+                            <animateTransform attributeName="transform" type="rotate" from="0 150 150" to="360 150 150"
+                                dur="30s" repeatCount="indefinite" />
+                        </circle>
+
+                        <circle cx="150" cy="150" r="95" fill="#f9fafb" fill-opacity="0.05" stroke="#e5e7eb"
+                            stroke-width="1" />
+
+                        <g filter="url(#glow)">
+                            <path d="M110 135L90 150L110 165" stroke="url(#rootGradient)" stroke-width="8"
+                                stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                            <path d="M190 135L210 150L190 165" stroke="url(#rootGradient)" stroke-width="8"
+                                stroke-linecap="round" stroke-linejoin="round" fill="none" />
+
+                            <rect x="145" y="130" width="10" height="40" rx="5" fill="url(#rootGradient)">
+                                <animate attributeName="opacity" values="1;0;1" dur="1.5s" repeatCount="indefinite" />
+                            </rect>
+                        </g>
+
+                        <circle cx="150" cy="150" r="110" fill="none" stroke="#8b5cf6" stroke-width="0.5"
+                            stroke-dasharray="2 4" opacity="0.3" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <div class="container">
+            <h2 class="section-title-projeto">Projetos Selecionados</h2>
+            <!-- Swiper -->
+            <div class="projeto-destaque swiper meusProjetos">
+
+                <div class="swiper-wrapper">
+
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="card-projeto">
+                            <div class="projeto-imagem">
+                                <img src="imgs/mockup-ianna.png" alt="Projeto Ianna">
+                            </div>
+                            <div class="projeto-info">
+                                <h3>Site Institucional - Ianna Cordeiro</h3>
+                                <p>
+                                    Site institucional moderno com foco em conversão,
+                                    responsividade total e performance otimizada.
+                                </p>
+                                <div class="projeto-tech">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JavaScript</span>
+                                </div>
+                                <a href="https://levygustavo9-del.github.io/IannaCordeiro/" target="_blank" class="btn-link">Ver Projeto →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="card-projeto">
+                            <div class="projeto-imagem">
+                                <img src="imgs/mockup-gisele.png" alt="Projeto Gisele">
+                            </div>
+                            <div class="projeto-info">
+                                <h3>Site Nutricionista - Gisele Karine</h3>
+                                <p>
+                                    Desenvolvimento completo com foco em UX,
+                                    SEO estruturado e layout clean profissional.
+                                </p>
+                                <div class="projeto-tech">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JavaScript</span>
+                                </div>
+                                <a href="https://levygustavo9-del.github.io/Gisele-Karine/index.html" target="_blank" class="btn-link">Ver Projeto →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="card-projeto">
+                            <div class="projeto-imagem">
+                                <img src="imgs/mockup-academia.png" alt="Projeto Academia">
+                            </div>
+                            <div class="projeto-info">
+                                <h3>Site Academia - RioSport Fitness</h3>
+                                <p>
+                                    Landing page moderna com foco em impacto visual,
+                                    responsividade e experiência imersiva.
+                                </p>
+                                <div class="projeto-tech">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JavaScript</span>
+                                </div>
+                                <a href="https://riosportfitness.netlify.app/" target="_blank" class="btn-link">Ver Projeto →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- Botões -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+
+            </div>
+
+            <!-- Paginação -->
+            <div class="swiper-pagination"></div>
+
+        </div>
+    </section>
+
+    <!-- Seção Habilidades -->
+    <section id="habilidades" class="habilidades">
+        <div class="container">
+            <h2 class="section-title">Habilidades</h2>
+            <div class="habilidades-grid">
+                <div class="skill-category">
+                    <h3>Front-End</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>HTML5</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>CSS3</span>
+                                <span>78%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 78%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>JavaScript</span>
+                                <span>54%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 54%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Responsive Design</span>
+                                <span>78%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 78%"></div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Ferramentas</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Git e GitHub</span>
+                                <span>78%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 78%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>VSCode</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>SEO Básico</span>
+                                <span>67%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 67%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="contato">
+
+        <canvas class="tech-bg"></canvas>
+
+        <div class="container">
+            <div class="title">
+                <h2 class="section-title-contato">Entre em Contato</h2>
+                <p class="contato-subtitulo">Adoraria ouvir você! Deixe uma mensagem.</p>
+            </div>
+
+            <div class="contato-container">
+                <form class="contato-form" id="contatoForm">
+                    <input type="text" placeholder="Seu nome" required>
+                    <input type="email" placeholder="Seu email" required>
+                    <input type="text" placeholder="Assunto">
+                    <textarea placeholder="Sua mensagem" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                </form>
+
+                <div class="contato-info">
+                    <h3>Informações de Contato</h3>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>(82) 98749-9282</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>levygustavo9@gmail.com</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Rio Largo, Maceió/AL</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/lêvy-gustavo-778923162?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="social-icon" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/levygustavo9-del?tab=repositories" class="social-icon" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://wa.me/5582987499282" class="social-icon" title="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/olevygustavoo?igsh=d21kNGRkcWdncmdq" class="social-icon"title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Lêvy Gustavo. Todos os direitos reservados.</p>
+            <p>Desenvolvido com <i class="fas fa-heart"></i> usando HTML, CSS e JavaScript</p>
+        </div>
+    </footer>
+
+    <script src="static/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</body>
