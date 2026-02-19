@@ -1,3 +1,5 @@
+// ===== INICIALIZAR EMAILJS =====
+emailjs.init("hRfPk3JdOTIURTKwA");
 
 // ===== Menu Hambúrguer =====
 const menuToggle = document.getElementById('menuToggle');
@@ -43,18 +45,32 @@ contatoForm.addEventListener('submit', (e) => {
         return;
     }
 
-    // Simular envio
+    // Envio real com EmailJS
     const btnSubmit = contatoForm.querySelector('button[type="submit"]');
     const textoOriginal = btnSubmit.textContent;
     btnSubmit.disabled = true;
     btnSubmit.textContent = 'Enviando...';
 
-    setTimeout(() => {
-        mostrarNotificacao('Mensagem enviada com sucesso! Obrigado por entrar em contato.', 'sucesso');
-        contatoForm.reset();
-        btnSubmit.disabled = false;
-        btnSubmit.textContent = textoOriginal;
-    }, 1500);
+    const templateParams = {
+        nome: nome,
+        email: email,
+        assunto: assunto,
+        mensagem: mensagem
+    };
+
+    emailjs.send("service_ucp215r", "template_cdb84oo", templateParams)
+        .then(() => {
+            mostrarNotificacao('Mensagem enviada com sucesso! Obrigado por entrar em contato.', 'sucesso');
+            contatoForm.reset();
+            btnSubmit.disabled = false;
+            btnSubmit.textContent = textoOriginal;
+        })
+        .catch((error) => {
+            mostrarNotificacao('Erro ao enviar mensagem. Tente novamente.', 'erro');
+            btnSubmit.disabled = false;
+            btnSubmit.textContent = textoOriginal;
+            console.error(error);
+        });
 });
 
 // Validar Email
