@@ -388,35 +388,72 @@ window.addEventListener('load', () => {
 // SWIPER DA PARTE DE PROJETOS
 document.addEventListener('DOMContentLoaded', function () {
     const swiperProjetos = new Swiper('.meusProjetos', {
-        // Configurações Básicas
-        slidesPerView: 1,           // 1 slide por vez no mobile
-        spaceBetween: 20,          // Espaço entre os cards
-        centeredSlides: true,       // O slide ativo fica no meio
-        loop: true,                 // Carrossel infinito
-        grabCursor: true,           // Cursor de "mãozinha" para arrastar
+        slidesPerView: 1,
+        spaceBetween: 20,
+        centeredSlides: true,
+        loop: false,
+        grabCursor: true,
 
-        // Efeito de transição suave
         speed: 800,
-        // Paginação (as bolinhas)
+
+        threshold: 10,           // Sensibilidade do arrasto
+        longSwipesRatio: 0.2,    // Reduz chance de pular 2 slides
+        loopAdditionalSlides: 1, // Evita bug visual no loop
+
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
-            dynamicBullets: true, // Bolinhas dinâmicas ficam lindas
+            dynamicBullets: true,
         },
 
-        // Setas de navegação
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
-        },
-
-
-
-        // Eventos para melhorar a UX
-        on: {
-            init: function () {
-                console.log('Swiper de Projetos Iniciado');
-            },
-        },
+        }
     });
 });
+
+// MODAL DE PROEJETOS:
+
+const modal = document.getElementById("modalLancamento");
+const fechar = document.getElementById("fecharModal");
+const botoesProjeto = document.querySelectorAll(".botao-projeto");
+const som = document.getElementById("modalSound");
+
+// Data fictícia de lançamento (altere aqui)
+const dataLancamento = new Date("February 25, 2026 00:00:00").getTime();
+
+botoesProjeto.forEach(botao => {
+    botao.addEventListener("click", (e) => {
+        e.preventDefault();
+        modal.classList.add("active");
+        som.play();
+    });
+});
+
+fechar.addEventListener("click", () => {
+    modal.classList.remove("active");
+});
+
+modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        modal.classList.remove("active");
+    }
+});
+
+// Contador
+setInterval(() => {
+    const agora = new Date().getTime();
+    const distancia = dataLancamento - agora;
+
+    const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+    const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+    document.getElementById("dias").innerText = dias;
+    document.getElementById("horas").innerText = horas;
+    document.getElementById("minutos").innerText = minutos;
+    document.getElementById("segundos").innerText = segundos;
+
+}, 1000);
