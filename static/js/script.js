@@ -451,9 +451,14 @@ setInterval(() => {
     const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
     const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
 
-    document.getElementById("dias").innerText = dias;
-    document.getElementById("horas").innerText = horas;
-    document.getElementById("minutos").innerText = minutos;
-    document.getElementById("segundos").innerText = segundos;
+    const diasEl = document.getElementById("dias");
+    const horasEl = document.getElementById("horas");
+    const minutosEl = document.getElementById("minutos");
+    const segundosEl = document.getElementById("segundos");
+
+    if (diasEl) diasEl.innerText = dias;
+    if (horasEl) horasEl.innerText = horas;
+    if (minutosEl) minutosEl.innerText = minutos;
+    if (segundosEl) segundosEl.innerText = segundos;
 
 }, 1000);

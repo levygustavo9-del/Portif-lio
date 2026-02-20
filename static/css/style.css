@@ -506,13 +506,14 @@ p {
 .botao-projeto {
     color: var(--cor-fundo);
     background: linear-gradient(135deg, #6366f1, #8b5cf6);
-    width: 35%;
-    padding: 4px 5px;
+    width: 45%;
+    padding: 0.75rem 1.5rem;
     border-radius: 17px;
     text-align: center;
     text-decoration: none;
     font-weight: 600;
     display: inline-flex;
+    justify-content: center;
     align-items: center;
     gap: 8px;
     font-size: 1rem;
@@ -529,8 +530,6 @@ p {
     content: '→ →';
     transition: transform 0.3s ease;
 }
-
-
 
 .botao-projeto:hover::after {
     transform: translateX(5px);
@@ -594,9 +593,17 @@ p {
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.15); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 /* Botão fechar */
@@ -1178,9 +1185,9 @@ p {
 
     .botao-projeto {
         font-size: 0.85rem;
-        width: 40%;
+        width: 70%;
+        padding: 0.65rem 1.2rem;
         margin: 10px auto;
-       
     }
 
     .swiper-button-next,
@@ -1474,9 +1481,14 @@ p {
         font-size: 0.75rem;
     }
 
-    .btn-link {
-        font-size: 0.9rem;
+
+    .botao-projeto {
+        font-size: 0.85rem;
+        width: 65%;
+        padding: 0.65rem 1.2rem;
+        margin: 10px auto;
     }
+
 
     .swiper-button-next,
     .swiper-button-prev {
@@ -1545,15 +1557,19 @@ p {
     .hero {
         flex-direction: column;
         text-align: center;
-        gap: 1rem; /* reduz */
+        gap: 1rem;
+        /* reduz */
         padding: 2rem;
-        min-height: auto; /* 🔥 remove altura forçada */
-        justify-content: flex-start; /* força colar no topo */
+        min-height: auto;
+        /* 🔥 remove altura forçada */
+        justify-content: flex-start;
+        /* força colar no topo */
     }
 
-   .hero-shape {
-    order: 1;
-        margin-bottom: 0.5rem; /* controla espaço real */
+    .hero-shape {
+        order: 1;
+        margin-bottom: 0.5rem;
+        /* controla espaço real */
     }
 
     .photo-container {
@@ -1650,6 +1666,13 @@ p {
 
     .projeto-tech {
         justify-content: center;
+    }
+
+    .botao-projeto {
+        font-size: 0.85rem;
+        width: 50%;
+        padding: 0.65rem 1.1rem;
+        margin: 10px auto;
     }
 
     /* Habilidades */
