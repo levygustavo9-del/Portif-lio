@@ -421,13 +421,21 @@ const botoesProjeto = document.querySelectorAll(".botao-projeto");
 const som = document.getElementById("modalSound");
 
 // Data fictícia de lançamento (altere aqui)
-const dataLancamento = new Date("February 25, 2026 00:00:00").getTime();
+const dataLancamento = new Date("March 15, 2026 00:00:00").getTime();
 
 botoesProjeto.forEach(botao => {
     botao.addEventListener("click", (e) => {
-        e.preventDefault();
-        modal.classList.add("active");
-        som.play();
+
+        const link = botao.getAttribute("href");
+
+        // Se NÃO tiver link real → abre modal
+        if (!link || link === "#") {
+            e.preventDefault();
+            modal.classList.add("active");
+            som.play();
+        }
+
+        // Se tiver link válido → deixa seguir normal
     });
 });
 
@@ -462,3 +470,4 @@ setInterval(() => {
     if (segundosEl) segundosEl.innerText = segundos;
 
 }, 1000);
+
