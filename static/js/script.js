@@ -251,7 +251,6 @@ document.head.appendChild(estilosNotificacao);
 console.log('%c👋 Bem-vindo ao meu Portfólio!', 'font-size: 20px; color: #6366f1; font-weight: bold;');
 console.log('%cDesenvolvido com HTML, CSS e JavaScript puro ✨', 'font-size: 14px; color: #8b5cf6;');
 
-// PARTICULAS DO HERO
 // PARTICULAS DO HERO - Com linhas e interação com o mouse
 window.addEventListener('load', () => {
     const canvases = document.querySelectorAll(".tech-bg");
